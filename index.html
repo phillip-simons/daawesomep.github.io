@@ -26,9 +26,9 @@
             }
             header h1 {
                 margin-left: 10px;
-                width: calc(100% - 200px);
+                width: calc(100% - 450px);
             }
-            header #reposstarred {
+            header #followers {
                 display: none;
                 font-size: 20px;
                 -webkit-border-radius: 5px 5px 5px 5px;
@@ -41,18 +41,18 @@
                 height: 65px;
                 padding: 5px;
             }
-            header #reposstarred p {
-                padding: 10px;
+            header #followers p {
+                padding: 17.5px 5px 10px 10px;
                 height: 100%;
                 margin: 0px;
                 color: #000;
             }
-            header #reposstarred div {
+            header #followers div {
                 font-size: 20px;
                 -webkit-border-radius: 5px 5px 5px 5px;
                 border-radius: 5px 5px 5px 5px;
                 color: #fff;
-                margin: -20px 7.5px 0px 0px;
+                margin: -27.5px 5px 0px 0px;
                 background-color: #333;
                 color: #fff;
                 height: 40px;
@@ -260,8 +260,8 @@
         <header>
                 <img src="https://www.gravatar.com/avatar/78d72ebd03cd6a003915a7bd318501ad?s=96&r=g" />
                 <h1>The Official Website of DaAwesomeP</h1>
-                <div id="reposstarred">
-                    <p>Repos<br>Starred: <p>
+                <div id="followers">
+                    <p>Followers: <p>
                     <div></div>
                 </div>
         </header>
@@ -404,15 +404,24 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript">
             var starredJson, starredJsonCount = 0;
-            $.getJSON("https://api.github.com/users/DaAwesomeP/starred", function(data) {
+            $.getJSON("https://api.github.com/users/DaAwesomeP/followers", function(data) {
                 starredJson = data;
-                for ( property in starredJson ) {
-                    if(starredJson.hasOwnProperty(property)) {
-                        $("#reposstarred div").fadeOut(100, function() {
-                            starredJsonCount++;
-                            $("#reposstarred div").html(starredJsonCount);
-                            $("#reposstarred").fadeIn(500, function() {$("#reposstarred div").fadeIn(250);});
-                        });
+                if (starredJson = []) {
+                    $("#followers div").fadeOut(100, function() {
+                        starredJsonCount = 0;
+                        $("#followers div").html(starredJsonCount);
+                        $("#followers").fadeIn(500, function() {$("#followers div").fadeIn(250);});
+                    });
+                }
+                else {
+                    for ( property in starredJson ) {
+                        if(starredJson.hasOwnProperty(property)) {
+                            $("#followers div").fadeOut(100, function() {
+                                starredJsonCount++;
+                                $("#followers div").html(starredJsonCount);
+                                $("#followers").fadeIn(500, function() {$("#followers div").fadeIn(250);});
+                            });
+                        }
                     }
                 }
             });
