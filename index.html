@@ -6,6 +6,8 @@
 		<meta name="keywords" content="DaAwesomeP, P THE AWESOME, GitHub, Accounts"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>DaAwesomeP</title>
+        <link href="https://www.gravatar.com/avatar/78d72ebd03cd6a003915a7bd318501ad.ico?s=16&r=g" rel="icon">
+        <link href="https://www.gravatar.com/avatar/78d72ebd03cd6a003915a7bd318501ad.png?s=32&r=g" rel="icon">
 		<link href='https://fonts.google.com/fonts?family=Lato:400,400italic,700,300italic,300,700italic,900'>
         <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<style type="text/css">
@@ -13,14 +15,22 @@
 				background: #000;
 				font-family: 'Lato', Arial, Helvetica, sans-serif;
                 margin: 0px;
-                margin: 0px;
 			}
-            div#top {
+            img {
+                border: 0px;
+            }
+            header * {
+                vertical-align: middle;
+                display: inline-block;
+                color: #fff;
+            }
+            header h1 {
+                margin-left: 10px;
+            }
+            div#middle {
                 height: calc(100% + 500px);
                 background: #efefef;
                 padding: 10px;
-                box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-                
             }
             footer {
                 font-size: 10px;
@@ -29,14 +39,16 @@
                 width: calc(100% - 20px);
                 background-color: #333;
                 padding: 10px;
+                -webkit-box-shadow:inset 0 7px 5px 2px rgba(0,0,0,0.5);
+                box-shadow:inset 0 7px 5px 2px rgba(0,0,0,0.5);
             }
-            footer a {
+            footer a#site-repo {
                 text-decoration: none;
                 color: #999;
                 display: block;
                 margin-top: 10px;
             }
-            footer a:hover, footer a:focus {
+            footer a#site-repo:hover, footer a#site-repo:focus {
                 text-decoration: underline;
                 width: none;
             }
@@ -71,6 +83,46 @@
                     width: 100%;
                 }
             }
+            @-webkit-keyframes column-focus-p {
+                from {
+                    color: #fff;
+                    text-shadow: 0 0 6px #fff;
+                }
+                to {
+                    color: #FF005D;
+                    text-shadow: 0 0 6px #000;
+                }
+            }
+            @-moz-keyframes column-focus-p {
+                from {
+                    color: #fff;
+                    text-shadow: 0 0 6px #fff;
+                }
+                to {
+                    color: #FF005D;
+                    text-shadow: 0 0 6px #000;
+                }
+            }
+            @-o-keyframes column-focus-p {
+                from {
+                    color: #fff;
+                    text-shadow: 0 0 6px #fff;
+                }
+                to {
+                    color: #FF005D;
+                    text-shadow: 0 0 6px #000;
+                }
+            }
+            @keyframes column-focus-p {
+                from {
+                    color: #fff;
+                    text-shadow: 0 0 6px #fff;
+                }
+                to {
+                    color: #FF005D;
+                    text-shadow: 0 0 6px #000;
+                }
+            }
             footer .columns .column:hover, footer .columns .column:focus {
                 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC42NSIvPgogICAgPHN0b3Agb2Zmc2V0PSI0NSUiIHN0b3AtY29sb3I9IiM3ZmViZmYiIHN0b3Atb3BhY2l0eT0iMC42NSIvPgogICAgPHN0b3Agb2Zmc2V0PSI1NCUiIHN0b3AtY29sb3I9IiM3ZmViZmYiIHN0b3Atb3BhY2l0eT0iMC42NSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2OCUiIHN0b3AtY29sb3I9IiM3ZmViZmYiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2OSUiIHN0b3AtY29sb3I9IiM3ZmViZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
                 background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.65) 0%, rgba(127,235,255,0.65) 45%, rgba(127,235,255,0.65) 54%, rgba(127,235,255,0.25) 68%, rgba(127,235,255,0) 69%);
@@ -81,16 +133,49 @@
                 background: radial-gradient(ellipse at center, rgba(0,0,0,0.65) 0%,rgba(127,235,255,0.65) 45%,rgba(127,235,255,0.65) 54%,rgba(127,235,255,0.25) 68%,rgba(127,235,255,0) 69%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#007febff',GradientType=1 );
             }
-            footer .columns .column:hover p, footer .columns .column:focus p {
-                color: #FF005D;
-                text-shadow: 0 0 6px #000;
+            footer .columns .column:hover p, footer .columns .column:hover i, footer .columns .column:focus p, footer .columns .column:focus i {
+                -webkit-animation: column-focus-p 1.5s infinite alternate both;
+                -moz-animation: column-focus-p 1.5s infinite alternate both;
+                -o-animation: column-focus-p 1.5s infinite alternate both;
+                animation: column-focus-p 1.5s infinite alternate both;
+                timing-function: ease-in-out;
+                animation-delay: 0s;
+            }
+            footer .columns .column p {
+                font-size: 20px;
+                margin: -2.5px auto 0px auto;
+                color: #fff;
+                text-shadow: 0 0 6px #fff;
+                background: rgba(100, 100, 100, 0.5);
             }
             a#githubPage div {
                 background: url("https://random-octocat.herokuapp.com") no-repeat top center;
                 background-size: contain;
             }
+            a#githubPage div p {
+                position: absolute;
+                z-index: 100;
+                margin: 52.5px 0px 0px -12.5px;
+                color: #000;
+                font-size: 13px;
+                text-decoration: none;
+                text-shadow: 0 0 10px #fff;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+                background: none;
+            }
+            a#githubPage div p i {
+                -webkit-transform: rotate(100deg);
+                -moz-transform: rotate(100deg);
+                -ms-transform: rotate(100deg);
+                -o-transform: rotate(100deg);
+                filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+                font-size: 12.5px;
+            }
             footer .columns .column div.image {
-                
                 width: 100%;
                 height: 400px;
             }
@@ -105,45 +190,156 @@
                 margin: 75px auto 0px auto;
                 color: #fff;
             }
-            footer .columns .column p {
-                font-size: 20px;
-                margin: -2.5px auto 0px auto;
+            ul.grid1 {
+                list-style-type: none;
+                padding: 0px;
+                margin: 0px;
+                display: table;
+                width: 100%;
+            }
+            ul.grid1 li {
+                background: #333;
+                padding: 0px;
+                margin: 0px 0px 3px 0px;
+                display: inline-block;
+            }
+            ul.grid1 li a {
+                text-decoration: none;
                 color: #fff;
-                text-shadow: 0 0 6px #fff;
-                background: rgba(100, 100, 100, 0.5);
+                padding: 10px;
+                margin: 0px;
+                display: block;
+            }
+            ul.grid1 li a:hover, ul.grid1 li a:focus {
+                color: #333;
+                background: #ccc;
+            }
+            ul.grid1 li a h3, ul.grid1 li a p {
+                margin: 0px;
+            }
+            ul.grid1-double-fa li a p {
+                margin: 0px 0px 0px 24px;
+            }
+            ul.grid1-double-fa li a i {
+                width: 20px;
             }
 		</style>
         <!--[if gte IE 9]>
             <style type="text/css">
                 .gradient {
-                    filter: none;
+                    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
                 }
             </style>
         <![endif]-->
 	</head>
 	<body>
-        <div id="top">
-            <header>
+        <header>
+                <img src="https://www.gravatar.com/avatar/78d72ebd03cd6a003915a7bd318501ad?s=96&r=g" />
                 <h1>The Official Website of DaAwesomeP</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#accounts">Accounts</a></li>
-                        <li><a href="https://github.com/DaAwesomeP/">GitHub</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <section>
-                <h2>About Me</h2>
-            </section>
-            <section>
+        </header>
+        <div id="middle">
+            <section id="section-accounts">
                 <h2>Accounts</h2>
+                 <ul class="grid1">
+                    <li><a href="http://osrc.dfm.io/daawesomep" target="_blank">
+                        <h3><img src="https://www.gravatar.com/avatar/78d72ebd03cd6a003915a7bd318501ad?s=16&r=g" /> The Open Source Report Card</h3>
+                    </a></li>
+                    <li><a href="https://github.com/DaAwesomeP" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=github.com&alt=p" /> GitHub</h3>
+                    </a></li>
+                    <li><a href="https://bitbucket.org/DaAwesomeP" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=bitbucket.org&alt=p" /> Bitbucket</h3>
+                    </a></li>
+                    <li><a href="https://sourceforge.net/users/daawesomep" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=sourceforge.net&alt=p" /> SourceForge</h3>
+                    </a></li>
+                    <li><a href="http://www.webdeveloper.com/forum/member.php?210275-DaAwesomeP" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=www.webdeveloper.com&alt=p" /> Webdeveloper.com</h3>
+                    </a></li>
+                    <li><a href="http://forum.arduino.cc/index.php?action=profile;u=194587" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=forum.arduino.cc&alt=p" /> Arduino Forums</h3>
+                    </a></li>
+                    <li><a href="http://askubuntu.com/users/199155/daawesomep" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=askubuntu.com&alt=p" /> Ask Ubuntu</h3>
+                    </a></li>
+                    <li><a href="http://ubuntuforums.org/member.php?u=1861069" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=ubuntuforums.org&alt=p" /> Ubuntu Forums</h3>
+                    </a></li>
+                    <li><a href="http://forums.linuxmint.com/memberlist.php?mode=viewprofile&u=141117" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=forums.linuxmint.com&alt=p" /> Linux Mint Forums</h3>
+                    </a></li>
+                    <li><a href="http://www.raspberrypi.org/forums/memberlist.php?mode=viewprofile&u=101358" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=www.raspberrypi.org&alt=p" /> Raspberry Pi Forums</h3>
+                    </a></li>
+                    <li><a href="http://forum.xbmc.org/member.php?action=profile&uid=181951" target="_blank">
+                        <h3><img src="http://xbmc.org/favicon.ico" /> XBMC Forums</h3>
+                    </a></li>
+                    <li><a href="http://www.mixxx.org/forums/memberlist.php?mode=viewprofile&u=8742" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=www.mixxx.org&alt=p" /> Mixxx Forums</h3>
+                    </a></li>
+                    <li><a href="http://forums.mozillazine.org/memberlist.php?mode=viewprofile&u=2628767" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=forums.mozillazine.org&alt=p" /> mozillaZine</h3>
+                    </a></li>
+                    <li><a href="http://www.blogger.com/profile/03212586756065909100" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=www.blogger.com&alt=p" /> Blogger</h3>
+                    </a></li>
+                    <li><a href="https://01.org/user/21158" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=01.org&alt=p" /> 01.org</h3>
+                    </a></li>
+                    <li><a href="http://userstyles.org/users/263641" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=userstyles.org&alt=p" /> userstyles.org</h3>
+                    </a></li>
+                    <li><a href="https://stackexchange.com/users/3397561/daawesomep" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=stackexchange.com&alt=p" /> Stack Exchange</h3>
+                    </a></li>
+                    <li><a href="http://www.element14.com/community/people/daawesomep" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=www.element14.com&alt=p" /> Element 14</h3>
+                    </a></li>
+                    <li><a href="http://daawesomep.kinja.com/" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=daawesomep.kinja.com&alt=p" /> Kinja</h3>
+                    </a></li>
+                </ul>
             </section>
-            <section>
-                <h2>GitHub</h2>
+            <section id="section-github">
+                <h2>GitHub Repos</h2>
+                <ul class="grid1 grid1-double-fa">
+                    <li><a href="https://github.com/DaAwesomeP/php-offline-fonts" target="_blank">
+                        <h3><i class="fa fa-book"></i> PHP Offline Fonts</h3>
+                        <p>Real Offline Fonts - Browser Specific</p>
+                    </a></li>
+                    <li><a href="https://github.com/DaAwesomeP/year-plus" target="_blank">
+                        <h3><i class="fa fa-book"></i> Year Plus</h3>
+                        <p>Year as a Service</p>
+                    </a></li>
+                    <li><a href="https://github.com/DaAwesomeP/2048-mobile" target="_blank">
+                        <h3><i class="fa fa-book"></i> 2048 Mobile</h3>
+                        <p>A better mobile version of the game 2048 for non-touchscreen devices</p>
+                    </a></li>
+                    
+                </ul>
             </section>
-            <section>
-                <h2>GitHub</h2>
+            <section id="section-publiconlineprojects">
+                <h2>Public Online Projects</h2>
+                <ul class="grid1 grid1-double-fa">
+                    <li><a href="https://daawesomep.github.io/2048-mobile/" target="_blank">
+                        <h3><i class="fa fa-gamepad"></i> 2048 Mobile</h3>
+                        <p>A better mobile version of the game 2048 for non-touchscreen devices</p>
+                    </a></li>
+                </ul>
+            </section>
+            <section id="section-coolstuff">
+                <h2>Cool Stuff</h2>
+                <ul class="grid1">
+                    <li><a href="http://www.tested.com/" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=www.tested.com&alt=p" /> Tested</h3>
+                    </a></li>
+                    <li><a href="http://makezine.com/" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=makezine.com&alt=p" /> MAKE Magazine</h3>
+                    </a></li>
+                    <li><a href="http://www.popularmechanics.com/" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=www.popularmechanics.com&alt=p" /> Popluar Mechanics</h3>
+                    </a></li>
+                </ul>
             </section>
             <aside>
                 <h3>Stats</h2>
@@ -152,7 +348,9 @@
         <footer>
             <div class="columns">
                 <a id="githubPage" href="https://github.com/DaAwesomeP/" title="DaAwesomeP on GitHub" target="_blank" class="gradient column">
-                    <div class="image"></div>
+                    <div class="image">
+                        <p>Randomly picked Octocat!<i class="fa fa-share"></i></p>
+                    </div>
                     <p>FOLLOW ME ON GITHUB!</p>
                 </a>
                 <a id="githubRepos" href="https://github.com/DaAwesomeP?tab=repositories" title="DaAwesomeP's Public Feed" target="_blank" class="gradient column">
@@ -164,7 +362,7 @@
                     <p>STALK ME.</p>
                 </a>
             </div>
-            <a href="https://github.com/DaAwesomeP/daawesomep.github.io" title="Repository for this website" target="_blank">Proudly Handwritten</a>
+            <a id="site-repo" href="https://github.com/DaAwesomeP/daawesomep.github.io" title="Repository for this website" target="_blank">Proudly Handwritten</a>
         </footer>
 	</body>
 </html>
