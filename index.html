@@ -36,7 +36,6 @@
                 right: 0px;
                 top: 0px;
                 position: absolute;
-                display: inline-block;
                 margin: 10.5px 10px 0px 0px;
                 background-color: #ccc;
                 height: 65px;
@@ -406,14 +405,13 @@
                 starredJson = data;
                 for ( property in starredJson ) {
                     if(starredJson.hasOwnProperty(property)) {
-                        $("#reposstarred").fadeOut(100, function () {
+                        $("#reposstarred div").fadeOut(100, function() {
                             starredJsonCount++;
                             $("#reposstarred div").html(starredJsonCount);
-                            $("#reposstarred").fadeIn(500);
+                            $("#reposstarred").fadeIn(500, function() {$("#reposstarred div").fadeIn(250);});
                         });
                     }
                 }
-                
             });
         </script>
 	</body>
