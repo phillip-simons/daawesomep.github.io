@@ -28,11 +28,10 @@
                 margin-left: 10px;
                 width: calc(100% - 450px);
             }
-            header #followers {
+            header #github-stats {
                 display: none;
-                font-size: 20px;
-                -webkit-border-radius: 5px 5px 5px 5px;
-                border-radius: 5px 5px 5px 5px;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
                 right: 0px;
                 top: 0px;
                 position: absolute;
@@ -41,25 +40,32 @@
                 height: 65px;
                 padding: 5px;
             }
-            header #followers p {
-                padding: 17.5px 5px 10px 10px;
-                height: 100%;
+            header #github-stats div p {
+                font-size: 7px;
                 margin: 0px;
-                color: #000;
+                padding: 0px;
+                color: #fff;
+                display: table-row;
             }
-            header #followers div {
-                font-size: 20px;
-                -webkit-border-radius: 5px 5px 5px 5px;
-                border-radius: 5px 5px 5px 5px;
+            header #github-stats div {
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
                 color: #fff;
-                margin: -27.5px 5px 0px 0px;
                 background-color: #333;
-                color: #fff;
-                height: 40px;
                 min-width: 40px;
                 text-align: center;
-                padding: 17.5px 5px 5px 5px;
+                margin: 2.5px 5px;
+                padding: 5px;
+                display: inline-block;
+                
+            }
+            header #github-stats div div {
+                font-size: 20px;
                 font-weight: bold;
+                display: table-cell;
+                margin-top: 5px;
+                padding: 0px;
+                height: 45px;
             }
             div#middle {
                 height: calc(100% + 500px);
@@ -260,9 +266,15 @@
         <header>
                 <img src="https://www.gravatar.com/avatar/78d72ebd03cd6a003915a7bd318501ad?s=96&r=g" />
                 <h1>The Official Website of DaAwesomeP</h1>
-                <div id="followers">
-                    <p>Followers: <p>
-                    <div></div>
+                <div id="github-stats">
+                    <div id="followers">
+                        <p>FOLLOWERS</p>
+                        <div></div>
+                    </div>
+                    <div id="following">
+                        <p>FOLLOWING</p>
+                        <div></div>
+                    </div>
                 </div>
         </header>
         <div id="middle">
@@ -280,6 +292,9 @@
                     </a></li>
                     <li><a href="https://sourceforge.net/users/daawesomep" target="_blank">
                         <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=sourceforge.net&alt=p" /> SourceForge</h3>
+                    </a></li>
+                    <li><a href="https://secure.gravatar.com/daawesomep" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=secure.gravatar.com&alt=p" /> Gravatar</h3>
                     </a></li>
                     <li><a href="http://www.webdeveloper.com/forum/member.php?210275-DaAwesomeP" target="_blank">
                         <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=www.webdeveloper.com&alt=p" /> Webdeveloper.com</h3>
@@ -316,6 +331,12 @@
                     </a></li>
                     <li><a href="https://www.blogger.com/profile/03212586756065909100" target="_blank">
                         <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=www.blogger.com&alt=p" /> Blogger</h3>
+                    </a></li>
+                    <li><a href="http://daawesomep.wordpress.com/" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=daawesomep.wordpress.com&alt=p" /> Wordpress.com</h3>
+                    </a></li>
+                    <li><a href="https://profiles.google.com/106723180179320360961" target="_blank">
+                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=profiles.google.com&alt=p" /> Google</h3>
                     </a></li>
                     <li><a href="https://01.org/user/21158" target="_blank">
                         <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=01.org&alt=p" /> 01.org</h3>
@@ -403,27 +424,13 @@
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript">
-            var starredJson, starredJsonCount = 0;
-            $.getJSON("https://api.github.com/users/DaAwesomeP/followers", function(data) {
-                starredJson = data;
-                if (starredJson = []) {
-                    $("#followers div").fadeOut(100, function() {
-                        starredJsonCount = 0;
-                        $("#followers div").html(starredJsonCount);
-                        $("#followers").fadeIn(500, function() {$("#followers div").fadeIn(250);});
-                    });
-                }
-                else {
-                    for ( property in starredJson ) {
-                        if(starredJson.hasOwnProperty(property)) {
-                            $("#followers div").fadeOut(100, function() {
-                                starredJsonCount++;
-                                $("#followers div").html(starredJsonCount);
-                                $("#followers").fadeIn(500, function() {$("#followers div").fadeIn(250);});
-                            });
-                        }
-                    }
-                }
+            var userJson;
+            $("#github-stats").fadeOut(100, function() {
+                $.getJSON('https://api.github.com/users/DaAwesomeP', function(userJson) {
+                    $("#github-stats #followers div").html(userJson.followers);
+                    $("#github-stats #following div").html(userJson.following);
+                    $("#github-stats").fadeIn(100);
+                });
             });
         </script>
 	</body>
