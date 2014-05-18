@@ -470,8 +470,10 @@
                     type: 'GET',
                     url:'https://api.github.com/users/DaAwesomeP/starred?per_page=1',
                     success: function(data, textStatus, request){
-                        starred = request.getResponseHeader('Link').substr(138);
-                        starred = starred.replace(/\D/g,'');
+                        starred = request.getResponseHeader('Link');
+                        starred = starred.substr(0, starred.length-13);
+                        starred = starred.split(/[\s=]+/);
+                        starred = starred[starred.length - 1];
                         $("#github-stats #starred div").html(starred);
                         fadeInStats();
                     }
