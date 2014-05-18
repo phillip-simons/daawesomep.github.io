@@ -16,6 +16,7 @@
 				font-family: 'Lato', Arial, Helvetica, sans-serif;
                 margin: 0px;
                 min-width: 500px;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
 			}
             img {
                 border: 0px;
@@ -422,6 +423,7 @@
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript">
+            document.addEventListener("touchstart", function(){}, true);
             var userJson;
             $("#github-stats").fadeOut(250, function() {
                 $.getJSON('https://api.github.com/users/DaAwesomeP', function(userJson) {
