@@ -1,0 +1,3 @@
+﻿User-agent: *
+Disallow: /pagedata/
+Sitemap: https://daawesomep.github.io/sitemap.xml
