@@ -266,7 +266,7 @@
                 color: #fff;
                 box-shadow: inset 0 0 0 4px #222, 0 0 1px rgba(0, 0, 0, 0);
             }
-            ul.grid1 li a:hover, ul.grid1 li a:focus, ul.grid1 li a:active {
+            ul.grid1 li a:not(img):hover, ul.grid1 li a:not(img):focus, ul.grid1 li a:not(img):active {
                 -webkit-transform: scale(1.05);
                 color: #333;
                 background-color: #eee;
@@ -283,7 +283,18 @@
             ul.grid1-double-fa li a i {
                 width: 20px;
             }
-            section ul#accounts-grid img {
+            section ul.icons img {
+                width: 16px;
+                height: 16px;
+                transform: translateZ(0px);
+                -moz-transition: transform 0 ease;
+                -webkit-transition: transform 0 ease;
+                -o-transition: transform 0 ease;
+                transition: transform 0 ease;
+                transform: scale(1);
+            }
+            ul.icons li a:hover img, ul.icons li a:focus img, ul.icons li a:active img {
+                transform: translateZ(0px) scale(0.95238095238095238095238095238095);
                 width: 16px;
                 height: 16px;
             }
@@ -326,84 +337,84 @@
         <div id="middle">
             <section>
                 <h2 id="accounts" title="Accounts">Accounts</h2>
-                 <ul class="grid1" id="accounts-grid">
+                 <ul class="grid1 icons">
                     <li><a href="http://osrc.dfm.io/daawesomep" title="The Open Source Report Card" target="_blank">
                         <h3><img src="https://www.gravatar.com/avatar/78d72ebd03cd6a003915a7bd318501ad?s=16&r=g" /> The Open Source Report Card</h3>
                     </a></li>
                     <li><a href="https://github.com/DaAwesomeP" title="Accounts" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://github.com" /> GitHub</h3>
+                        <h3><img src="http://g.etfv.co/http://github.com?defaulticon=lightpng" /> GitHub</h3>
                     </a></li>
                     <li><a href="https://bitbucket.org/DaAwesomeP" title="Bitbucket" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://bitbucket.org" /> Bitbucket</h3>
+                        <h3><img src="http://g.etfv.co/http://bitbucket.org?defaulticon=lightpng" /> Bitbucket</h3>
                     </a></li>
                     <li><a href="https://sourceforge.net/users/daawesomep" title="SourceForge" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://sourceforge.net" /> SourceForge</h3>
+                        <h3><img src="http://g.etfv.co/http://sourceforge.net?defaulticon=lightpng" /> SourceForge</h3>
                     </a></li>
                     <li><a href="https://secure.gravatar.com/daawesomep" title="Gravatar" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://gravatar.com" /> Gravatar</h3>
+                        <h3><img src="http://g.etfv.co/http://gravatar.com?defaulticon=lightpng" /> Gravatar</h3>
                     </a></li>
                     <li><a href="http://www.webdeveloper.com/forum/member.php?210275-DaAwesomeP" title="Webdeveloper.com" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://www.webdeveloper.com" /> Webdeveloper.com</h3>
+                        <h3><img src="http://g.etfv.co/http://www.webdeveloper.com?defaulticon=lightpng" /> Webdeveloper.com</h3>
                     </a></li>
                     <li><a href="http://forum.arduino.cc/index.php?action=profile;u=194587" title="Arduino Forums" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://forum.arduino.cc" /> Arduino Forums</h3>
+                        <h3><img src="http://g.etfv.co/http://forum.arduino.cc?defaulticon=lightpng" /> Arduino Forums</h3>
                     </a></li>
                     <li><a href="https://www.sparkfun.com/users/477395" title="Sparkfun" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://www.sparkfun.com" /> Sparkfun</h3>
+                        <h3><img src="http://g.etfv.co/http://www.sparkfun.com?defaulticon=lightpng" /> Sparkfun</h3>
                     </a></li>
                     <li><a href="http://askubuntu.com/users/199155/daawesomep" title="Ask Ubuntu" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://askubuntu.com" /> Ask Ubuntu</h3>
+                        <h3><img src="http://g.etfv.co/http://askubuntu.com?defaulticon=lightpng" /> Ask Ubuntu</h3>
                     </a></li>
                     <li><a href="http://ubuntuforums.org/member.php?u=1861069" title="Ubuntu Forums" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://ubuntuforums.org" /> Ubuntu Forums</h3>
+                        <h3><img src="http://g.etfv.co/http://ubuntuforums.org?defaulticon=lightpng" /> Ubuntu Forums</h3>
                     </a></li>
                     <li><a href="http://forums.linuxmint.com/memberlist.php?mode=viewprofile&u=141117" title="Linux Mint Forums" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://forums.linuxmint.com" /> Linux Mint Forums</h3>
+                        <h3><img src="http://g.etfv.co/http://forums.linuxmint.com?defaulticon=lightpng" /> Linux Mint Forums</h3>
                     </a></li>
                     <li><a href="http://www.raspberrypi.org/forums/memberlist.php?mode=viewprofile&u=101358" title="Raspberry Pi Forums" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://www.raspberrypi.org" /> Raspberry Pi Forums</h3>
+                        <h3><img src="http://g.etfv.co/http://www.raspberrypi.org?defaulticon=lightpng" /> Raspberry Pi Forums</h3>
                     </a></li>
                     <li><a href="http://forum.xbmc.org/member.php?action=profile&uid=181951" title="XBMC Forums" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://forum.xbmc.org" /> XBMC Forums</h3>
+                        <h3><img src="http://g.etfv.co/http://forum.xbmc.org?defaulticon=lightpng" /> XBMC Forums</h3>
                     </a></li>
                     <li><a href="http://www.mixxx.org/forums/memberlist.php?mode=viewprofile&u=8742" title="Mixxx Forums" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://www.mixxx.org" /> Mixxx Forums</h3>
+                        <h3><img src="http://g.etfv.co/http://www.mixxx.org?defaulticon=lightpng" /> Mixxx Forums</h3>
                     </a></li>
                     <li><a href="https://sourceforge.net/apps/phpbb/lmms/memberlist.php?mode=viewprofile&u=1030" title="LMMS Forums" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://lmms.sourceforge.net" /> LMMS Forums</h3>
+                        <h3><img src="http://g.etfv.co/http://lmms.sourceforge.net?defaulticon=lightpng" /> LMMS Forums</h3>
                     </a></li>
                     <li><a href="http://forums.mozillazine.org/memberlist.php?mode=viewprofile&u=2628767" title="mozillaZine" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://forums.mozillazine.org" /> mozillaZine</h3>
+                        <h3><img src="http://g.etfv.co/http://forums.mozillazine.org?defaulticon=lightpng" /> mozillaZine</h3>
                     </a></li>
                     <li><a href="https://www.blogger.com/profile/03212586756065909100" title="Blogger" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://www.blogger.com" /> Blogger</h3>
+                        <h3><img src="http://g.etfv.co/http://www.blogger.com?defaulticon=lightpng" /> Blogger</h3>
                     </a></li>
                     <li><a href="http://daawesomep.wordpress.com/" title="Wordpress.com" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://daawesomep.wordpress.com" /> Wordpress.com</h3>
+                        <h3><img src="http://g.etfv.co/http://daawesomep.wordpress.com?defaulticon=lightpng" /> Wordpress.com</h3>
                     </a></li>
                     <li><a href="https://profiles.google.com/106723180179320360961?rel=author" title="Google" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://profiles.google.com" /> Google</h3>
+                        <h3><img src="http://g.etfv.co/http://profiles.google.com?defaulticon=lightpng" /> Google</h3>
                     </a></li>
                     <li><a href="https://01.org/user/21158" title="01.org" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://01.org" /> 01.org</h3>
+                        <h3><img src="http://g.etfv.co/http://01.org?defaulticon=lightpng" /> 01.org</h3>
                     </a></li>
                     <li><a href="http://userstyles.org/users/263641" title="userstyles.org" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://userstyles.org" /> userstyles.org</h3>
+                        <h3><img src="http://g.etfv.co/http://userstyles.org?defaulticon=lightpng" /> userstyles.org</h3>
                     </a></li>
                     <li><a href="http://userscripts.org/users/546287" title="userscripts.org" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://userscripts.org" /> userscripts.org</h3>
+                        <h3><img src="http://g.etfv.co/http://userscripts.org?defaulticon=lightpng" /> userscripts.org</h3>
                     </a></li>
                     <li><a href="https://atom.io/users/DaAwesomeP" title="Atom" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://atom.io" /> Atom</h3>
+                        <h3><img src="http://g.etfv.co/http://atom.io?defaulticon=lightpng" /> Atom</h3>
                     </a></li>
                     <li><a href="https://stackexchange.com/users/3397561/daawesomep" title="Stack Exchange" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://stackexchange.com" /> Stack Exchange</h3>
+                        <h3><img src="http://g.etfv.co/http://stackexchange.com?defaulticon=lightpng" /> Stack Exchange</h3>
                     </a></li>
                     <li><a href="http://www.element14.com/community/people/daawesomep" title="Element 14" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://www.element14.com" /> Element 14</h3>
+                        <h3><img src="http://g.etfv.co/http://www.element14.com?defaulticon=lightpng" /> Element 14</h3>
                     </a></li>
                     <li><a href="http://daawesomep.kinja.com/" title="Kinja" target="_blank">
-                        <h3><img src="http://g.etfv.co/http://daawesomep.kinja.com" /> Kinja</h3>
+                        <h3><img src="http://g.etfv.co/http://daawesomep.kinja.com?defaulticon=lightpng" /> Kinja</h3>
                     </a></li>
                 </ul>
             </section>
@@ -435,15 +446,15 @@
             </section>
             <section>
                 <h2 id="coolstuff" title="Cool Stuff">Cool Stuff</h2>
-                <ul class="grid1">
+                <ul class="grid1 icons">
                     <li><a href="http://www.tested.com/" title="Tested" target="_blank">
-                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=www.tested.com" /> Tested</h3>
+                        <h3><img src="http://g.etfv.co/http://www.tested.com?defaulticon=lightpng" /> Tested</h3>
                     </a></li>
                     <li><a href="http://makezine.com/" title="MAKE Magazine" target="_blank">
-                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=makezine.com" /> MAKE Magazine</h3>
+                        <h3><img src="http://g.etfv.co/http://makezine.com?defaulticon=lightpng" /> MAKE Magazine</h3>
                     </a></li>
                     <li><a href="http://www.popularmechanics.com/" title="Popular Mechanics" target="_blank">
-                        <h3><img src="https://s2.googleusercontent.com/s2/favicons?domain=www.popularmechanics.com" /> Popluar Mechanics</h3>
+                        <h3><img src="http://g.etfv.co/http://www.popularmechanics.com?defaulticon=lightpng" /> Popluar Mechanics</h3>
                     </a></li>
                 </ul>
             </section>
